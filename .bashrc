@@ -40,22 +40,22 @@ function parse_git_dirty {
     bits=''
     
     if [ "${renamed}" == "0" ]; then
-        bits=">${BLUE}${bits}"
+        bits="${BLUE} ~${bits}"
     fi
     if [ "${ahead}" == "0" ]; then
-        bits="${WHITE}*${bits}"
+        bits="${CYAN} >${bits}"
     fi
     if [ "${newfile}" == "0" ]; then
-        bits="${GREEN}+${bits}"
+        bits="${GREEN} +${bits}"
     fi
     if [ "${untracked}" == "0" ]; then
-        bits="${WHITE}?${bits}"
+        bits="${RED} ?${bits}"
     fi
     if [ "${deleted}" == "0" ]; then
-        bits="${RED}x${bits}"
+        bits="${RED} x${bits}"
     fi
     if [ "${dirty}" == "0" ]; then
-        dirtybits="" # "${YELLOW}~"
+        dirtybits=" " # " ${YELLOW}~"
         if [ ! "${pcount}" == "0" ]; then
             dirtybits="${dirtybits}${GREEN}+${pcount}"
         fi
@@ -65,7 +65,7 @@ function parse_git_dirty {
         bits="${dirtybits}${bits}"
     fi
     if [ ! "${bits}" == "" ]; then
-        echo " ${bits}"
+        echo "${bits}"
     else
         echo ""
     fi
