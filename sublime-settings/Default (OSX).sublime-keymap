@@ -1,0 +1,46 @@
+[
+	{ "keys": ["super+ctrl+l"], "command": "wrap_lines_plus", "args": {"width": 78}},
+    { "keys": ["super+\\"], "command": "reveal_in_side_bar"},
+    { "keys": ["super+shift+\\"], "command": "copy_path"},
+
+    // don't let InsertDate override sorting key-mappings
+    { "keys": ["f5"], "command": "sort_lines", "args": {"case_sensitive": false} },
+    { "keys": ["ctrl+f5"], "command": "sort_lines", "args": {"case_sensitive": true} },
+
+    // Auto-pair dollar sign
+    { "keys": ["$"], "command": "insert_snippet", "args": {"contents": "\\$$0\\$"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+            { "key": "preceding_text", "operator": "not_regex_contains", "operand": "[$a-zA-Z0-9_]$", "match_all": true },
+            { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single - punctuation.definition.string.end", "match_all": true }
+        ]
+    },
+    { "keys": ["$"], "command": "insert_snippet", "args": {"contents": "\\$${0:$SELECTION}\\$"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+
+    // Auto-pair back tick
+    { "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`$0`"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|\\}|>|$)", "match_all": true },
+            { "key": "preceding_text", "operator": "not_regex_contains", "operand": "[`a-zA-Z0-9_]$", "match_all": true },
+            { "key": "eol_selector", "operator": "not_equal", "operand": "string.quoted.single - punctuation.definition.string.end", "match_all": true }
+        ]
+    },
+    { "keys": ["`"], "command": "insert_snippet", "args": {"contents": "`${0:$SELECTION}`"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    {
+        "keys": ["super+option+g"], "command": "google_spell_check"
+    }
+]

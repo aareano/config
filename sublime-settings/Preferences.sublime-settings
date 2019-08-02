@@ -1,0 +1,47 @@
+{
+	"added_words":
+	[
+		"Online",
+		"sensorless",
+		"online",
+		"offline",
+		"minima",
+		"truthiness",
+		"Coursera",
+		"backpropagation",
+		"feedforward",
+		"frac",
+		"mathbb",
+		"vec",
+		"mathcal",
+		"autolink",
+		"incentivized",
+		"overfitting",
+		"hyperparameter",
+		"softmax",
+		"meh",
+		"Convolutional",
+		"scratchpad",
+		"convolutional",
+		"Neuroscience",
+		"neuroscience",
+		"Hebbian"
+	],
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"detect_indentation": false,
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 17,
+	"ignored_packages":
+	[
+		"SublimeLinter-flake8",
+		"Vintage"
+	],
+	"rulers":
+	[
+		80
+	],
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}

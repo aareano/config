@@ -1,0 +1,7 @@
+{
+    "auto_format_on_save": true,
+    "singleQuote": true,
+    "auto_format_on_save_excludes": [
+            "*.md"
+        ]
+}

@@ -1,0 +1,82 @@
+{
+	"format": "%c",
+	"prompt_config":
+	[
+		{
+			"name": "Default"
+		},
+		{
+			"format": "%X",
+			"name": "Time"
+		},
+		{
+			"format": "%x",
+			"name": "Date"
+		},
+		{
+			"format": "$default %Z",
+			"name": "Default (with timezone)"
+		},
+		{
+			"format": "iso",
+			"name": "iso"
+		},
+		{
+			"format": "%Y-%m-%d",
+			"name": "iso date"
+		},
+		{
+			"format": "unix",
+			"name": "unix"
+		},
+		{
+			"format": "$default %Z",
+			"name": "UTC",
+			"tz_out": "UTC"
+		},
+		{
+			"format": "$default (UTC%z)",
+			"name": "UTC+",
+			"tz_out": "UTC"
+		},
+		{
+			"format": "iso",
+			"name": "UTC iso",
+			"tz_out": "UTC"
+		},
+		{
+			"format": "$default %Z",
+			"name": "EST",
+			"tz_out": "EST"
+		},
+		{
+			"format": "$default %Z (UTC%z)",
+			"name": "EST+",
+			"tz_out": "EST"
+		},
+		{
+			"format": "$default %Z",
+			"name": "PST",
+			"tz_out": "PST8PDT"
+		},
+		{
+			"format": "$default %Z (UTC%z)",
+			"name": "PST+",
+			"tz_out": "PST8PDT"
+		},
+		{
+			"format": "$default %Z",
+			"name": "CET",
+			"tz_out": "CET"
+		},
+		{
+			"format": "$default %Z (UTC%z)",
+			"name": "CET+",
+			"tz_out": "CET"
+		}
+	],
+	"tz_in": "America/New_York",
+	"user_prompt_config":
+	[
+	]
+}
